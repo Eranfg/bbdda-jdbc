@@ -24,9 +24,9 @@ public class MySqlConnector {
             //Creamos la conexión a la base de datos
             this.connection = DriverManager.getConnection(
                     "jdbc:mysql://" + host + "/" + database,
-                   /* System.getenv("MYSQL_USER"),
-                    System.getenv("MYSQL_PASSWORD"));*/
-                    "root", "mysql");
+                    System.getenv("MYSQL_USER"),
+                    System.getenv("MYSQL_PASSWORD"));
+
 
         } catch (SQLException e) {
             log.error("Error al conectar con la base de datos", e);

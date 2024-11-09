@@ -25,9 +25,9 @@ public class OracleDatabaseConnector {
             //Creamos la conexión a la base de datos
             this.connection = DriverManager.getConnection(
                     "jdbc:oracle:thin:@//" + host + "/" + database,
-                   /* System.getenv("ORACLE_USER"),
-                    System.getenv("ORACLE_PASSWORD"));*/
-                    "HR", "oracle");
+                    System.getenv("ORACLE_USER"),
+                    System.getenv("ORACLE_PASSWORD"));
+                    //"HR", "oracle");
 
         } catch (SQLException e) {
             log.error("Error al conectar con la base de datos", e);
